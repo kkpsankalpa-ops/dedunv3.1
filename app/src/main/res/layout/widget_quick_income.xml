@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_quick_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <!-- Translucent capsule pill container matching Google search widget visual language -->
+    <LinearLayout
+        android:id="@+id/btn_quick_pill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="52dp"
+        android:layout_gravity="center"
+        android:background="@drawable/widget_pill_dark_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <!-- Left side: small circular icon badge on subtle lighter translucent circle background -->
+        <FrameLayout
+            android:id="@+id/icon_badge"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/widget_pill_icon_badge_bg">
+
+            <ImageView
+                android:id="@+id/iv_quick_icon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_widget_arrow_down"
+                android:tint="@color/widget_gold_primary"
+                android:contentDescription="Income" />
+        </FrameLayout>
+
+        <!-- Middle: small uppercase label and live running total for today in bold white text -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="6dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_quick_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TODAY · INCOME"
+                android:textColor="@color/widget_gold_primary"
+                android:textSize="9.5sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:singleLine="true"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tv_quick_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Rs. 0.00"
+                android:textColor="#FFFFFFFF"
+                android:textSize="13.5sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <!-- Right side: small solid-colored circular "+" button (green for Income) -->
+        <FrameLayout
+            android:id="@+id/btn_quick_add"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/widget_pill_add_income_bg">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_widget_add"
+                android:tint="#FFFFFFFF"
+                android:contentDescription="+ Income" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

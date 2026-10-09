@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- Solid vibrant green circular background for income action button -->
+    <solid android:color="#4E9E67" />
+</shape>

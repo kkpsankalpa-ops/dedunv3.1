@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">DEDUN</string>
+    <string name="widget_name_large">DEDUN Balance &amp; Budget</string>
+    <string name="widget_name_small">DEDUN Quick Status</string>
+    <string name="widget_name_quick_spend">DEDUN + Spend</string>
+    <string name="widget_name_quick_income">DEDUN + Income</string>
+    <string name="widget_quick_spend_label">+ Spend</string>
+    <string name="widget_quick_income_label">+ Income</string>
+    <string name="widget_pill_spend_label">TODAY · SPENT</string>
+    <string name="widget_pill_income_label">TODAY · INCOME</string>
+    <string name="widget_balance_label">CURRENT BALANCE</string>
+    <string name="widget_fallback_text">Open DEDUN to sync ledger</string>
+    <string name="widget_safe_to_spend_label">Safe to spend</string>
+</resources>

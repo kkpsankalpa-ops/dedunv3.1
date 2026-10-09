@@ -1,0 +1,6 @@
+{
+  "name": "DEDUN",
+  "description": "Personal Ledger & Cashflow Management with multi-theme styling, monthly PDF reports, multi-sheet Excel (.xlsx) exports, bank passbook snapshots, and burn-rate advisers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_background">
+
+    <!-- Custom Photo or Theme Synchronized Background -->
+    <ImageView
+        android:id="@+id/iv_widget_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:contentDescription="@null"
+        android:visibility="gone" />
+
+    <!-- Fallback State (before user opens app) -->
+    <LinearLayout
+        android:id="@+id/widget_fallback_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_app_logo"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/tv_fallback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/app_name"
+            android:textColor="@color/widget_gold_primary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/widget_fallback_text"
+            android:textColor="@color/widget_text_muted"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Main Content State -->
+    <LinearLayout
+        android:id="@+id/widget_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- Top Row: Top-Left Circular DEDUN Badge & Top-Right Badges/Settings -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Top-Left Circular Badge with DEDUN Logo -->
+            <FrameLayout
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="@drawable/widget_logo_badge_bg">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_app_logo"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_brand_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/app_name"
+                android:textColor="@color/widget_gold_primary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Streak Flame Badge -->
+            <LinearLayout
+                android:id="@+id/badge_streak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/widget_badge_bg"
+                android:gravity="center_vertical"
+                android:paddingStart="6dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="2dp">
+
+                <ImageView
+                    android:id="@+id/iv_streak_icon"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_widget_flame"
+                    android:contentDescription="Streak" />
+
+                <TextView
+                    android:id="@+id/tv_streak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="0"
+                    android:textColor="@color/widget_gold_secondary"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Reopen Config / Settings Icon -->
+            <ImageView
+                android:id="@+id/btn_widget_settings"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="6dp"
+                android:padding="3dp"
+                android:src="@drawable/ic_widget_settings"
+                android:contentDescription="Configure Widget" />
+        </LinearLayout>
+
+        <!-- Main Body: Split between Hero Balance/Flow/Safe section and Quick Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Left Side: Restructured Hero Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.35"
+                android:orientation="vertical">
+
+                <!-- Balance Label -->
+                <TextView
+                    android:id="@+id/tv_balance_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/widget_balance_label"
+                    android:textColor="@color/widget_text_muted"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05" />
+
+                <!-- 1. Primary Largest Headline Number: Current Balance -->
+                <TextView
+                    android:id="@+id/tv_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="Rs. 0.00"
+                    android:textColor="@color/widget_gold_primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- 2. Secondary Line Directly Below Balance: Net Cash Flow Today -->
+                <TextView
+                    android:id="@+id/tv_net_cash_flow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="+Rs. 0.00 today"
+                    android:textColor="#728C69"
+                    android:textSize="10.5sp"
+                    android:textStyle="bold" />
+
+                <!-- 3. Smaller Secondary Section: Safe-to-Spend & Progress Bar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_safe_to_spend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Safe to spend: Rs. 0.00"
+                        android:textColor="@color/widget_text_muted"
+                        android:textSize="9.5sp"
+                        android:textStyle="bold" />
+
+                    <!-- Bold Solid-Color Progress Bar -->
+                    <ImageView
+                        android:id="@+id/iv_widget_progress_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="2dp"
+                        android:scaleType="fitXY"
+                        android:contentDescription="Daily Spend Progress" />
+
+                    <!-- Small Caption Beneath ("Rs. X left today") -->
+                    <TextView
+                        android:id="@+id/tv_progress_caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs. 0.00 left today"
+                        android:textColor="@color/widget_text_muted"
+                        android:textSize="9sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Spacer between Hero and Actions -->
+            <FrameLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <!-- Right Side: Quick Action Buttons (+ Spend / + Income) -->
+            <LinearLayout
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- Built-in + Spend Button -->
+                <LinearLayout
+                    android:id="@+id/btn_large_spend"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/widget_quick_button_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_widget_spend"
+                        android:tint="#D95F5F"
+                        android:contentDescription="+ Spend" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/widget_quick_spend_label"
+                        android:textColor="@color/widget_text_primary"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp" />
+
+                <!-- Built-in + Income Button -->
+                <LinearLayout
+                    android:id="@+id/btn_large_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/widget_quick_button_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_widget_income"
+                        android:tint="#728C69"
+                        android:contentDescription="+ Income" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/widget_quick_income_label"
+                        android:textColor="@color/widget_text_primary"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

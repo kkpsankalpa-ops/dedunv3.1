@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" width="100%" height="100%" class="brand-dedun-svg-logo" aria-label="DEDUN">
+  <defs>
+    <linearGradient id="dedunGoldLusterDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff3d6"/>
+      <stop offset="16%" stop-color="#f3d798"/>
+      <stop offset="42%" stop-color="#dfaa52"/>
+      <stop offset="74%" stop-color="#ba802e"/>
+      <stop offset="100%" stop-color="#7a4c12"/>
+    </linearGradient>
+    <linearGradient id="dedunGoldLusterLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#af7c27"/>
+      <stop offset="35%" stop-color="#8c5e18"/>
+      <stop offset="70%" stop-color="#6c450f"/>
+      <stop offset="100%" stop-color="#4d2e07"/>
+    </linearGradient>
+    <linearGradient id="starHighlightDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#f9e5b7"/>
+      <stop offset="100%" stop-color="#d29a3e"/>
+    </linearGradient>
+    <linearGradient id="starHighlightLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7deb0"/>
+      <stop offset="50%" stop-color="#b8842c"/>
+      <stop offset="100%" stop-color="#6b4410"/>
+    </linearGradient>
+  </defs>
+
+  <g class="dedun-logo-paths">
+    <!-- D 1 -->
+    <path class="dedun-letter" fill-rule="evenodd" d="
+      M 148 64
+      C 198 64 238 84 238 116
+      C 238 148 198 168 148 168
+      C 126 168 108 164 96 156
+      C 86 166 68 182 46 196
+      C 66 178 84 162 94 146
+      L 94 86
+      C 84 70 66 54 46 36
+      C 68 50 86 66 96 76
+      C 108 68 126 64 148 64
+      Z
+      M 118 80
+      L 118 152
+      C 128 152 140 152 150 150
+      C 180 144 206 134 206 116
+      C 206 98 180 88 150 82
+      C 140 80 128 80 118 80
+      Z
+    "/>
+    <!-- 4-point Diamond Star in D1 -->
+    <path class="dedun-star" d="
+      M 160 94
+      C 160 106 152 116 142 116
+      C 152 116 160 126 160 138
+      C 160 126 168 116 178 116
+      C 168 116 160 106 160 94
+      Z
+    "/>
+
+    <!-- E -->
+    <path class="dedun-letter" d="
+      M 256 64
+      L 348 64
+      C 348 70 346 80 342 90
+      L 334 78
+      L 286 78
+      L 286 110
+      L 326 110
+      C 326 114 324 119 320 123
+      L 316 117
+      L 286 117
+      L 286 154
+      L 338 154
+      L 346 142
+      C 346 152 348 162 348 168
+      L 256 168
+      C 260 162 264 156 264 150
+      L 264 82
+      C 264 76 260 70 256 64
+      Z
+    "/>
+
+    <!-- D 2 -->
+    <path class="dedun-letter" fill-rule="evenodd" d="
+      M 388 82
+      C 388 68 402 52 436 44
+      C 460 38 480 44 496 52
+      C 474 54 456 58 444 64
+      C 488 70 518 90 518 116
+      C 518 148 482 168 430 168
+      C 410 168 394 164 382 156
+      C 372 166 354 182 332 196
+      C 352 178 370 162 380 146
+      L 380 92
+      C 380 88 384 84 388 82
+      Z
+      M 404 80
+      L 404 152
+      C 414 152 426 152 436 150
+      C 466 144 486 134 486 116
+      C 486 98 466 88 436 82
+      C 426 80 414 80 404 80
+      Z
+    "/>
+
+    <!-- U -->
+    <path class="dedun-letter" fill-rule="evenodd" d="
+      M 532 64
+      C 536 70 540 76 540 82
+      L 540 120
+      C 540 142 554 156 576 156
+      C 598 156 612 142 612 120
+      L 612 82
+      C 612 76 616 70 620 64
+      L 638 64
+      C 634 70 630 76 630 82
+      L 630 120
+      C 630 150 606 166 586 166
+      C 586 169 590 171 594 173
+      C 586 177 580 186 576 200
+      C 572 186 566 177 558 173
+      C 562 171 566 169 566 166
+      C 546 166 522 150 522 120
+      L 522 82
+      C 522 76 518 70 514 64
+      Z
+    "/>
+
+    <!-- N -->
+    <path class="dedun-letter" d="
+      M 646 80
+      C 646 62 658 46 686 36
+      C 672 46 668 58 670 70
+      L 670 150
+      C 670 156 666 162 662 168
+      L 680 168
+      C 678 162 676 156 676 150
+      L 676 88
+      L 744 168
+      L 762 168
+      C 778 178 808 190 852 190
+      C 864 190 876 188 886 184
+      C 860 186 832 178 804 166
+      C 778 154 770 146 770 138
+      L 770 82
+      C 770 76 774 70 778 64
+      L 760 64
+      C 762 70 764 76 764 82
+      L 764 138
+      L 700 64
+      Z
+    "/>
+  </g>
+</svg>
