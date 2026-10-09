@@ -3491,6 +3491,18 @@
       border-color: rgba(217, 119, 6, 0.35);
     }
 
+    .today-status-pill.pill-neutral {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+    }
+
+    [data-theme="light"] .today-status-pill.pill-neutral {
+      background: rgba(0, 0, 0, 0.06);
+      color: var(--text-secondary);
+      border-color: var(--border-subtle);
+    }
+
     .today-progress-wrap {
       width: 100%;
       margin-bottom: 8px;
@@ -3524,6 +3536,10 @@
 
     .today-progress-bar-fill.fill-over {
       background: #e57373;
+    }
+
+    .today-progress-bar-fill.fill-neutral {
+      background: var(--border-subtle);
     }
 
     .today-progress-caption {
@@ -7569,6 +7585,12 @@
               </div>
             </div>
             <div id="todayProgressCaption" class="today-progress-caption">Spent Rs. 0 of your Rs. 1,000 limit</div>
+            <div id="noLimitSettingsBtnWrap" class="allowance-arrived-wrap" style="display: none;">
+              <button type="button" class="btn-allowance-arrived" id="btnNoLimitSettings">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                <span>Open Settings</span>
+              </button>
+            </div>
           </div>
 
           <!-- 3. Card: Money lasts -->
@@ -7589,6 +7611,12 @@
               <button type="button" class="btn-allowance-arrived" id="btnAllowanceArrived">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                 <span>Allowance arrived</span>
+              </button>
+            </div>
+            <div id="needsTargetBtnWrap" class="allowance-arrived-wrap" style="display: none;">
+              <button type="button" class="btn-allowance-arrived" id="btnNeedsTargetSettings">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                <span>Open Settings</span>
               </button>
             </div>
           </div>
@@ -7718,7 +7746,7 @@
                 </div>
 
                 <!-- Spread visualization: segmented bar + distribution histogram -->
-                <div class="forecast-vis-card" aria-label="1,000 Monte Carlo trial outcomes spread">
+                <div class="forecast-vis-card" aria-label="Forecast chart outcomes">
                   <div class="forecast-vis-header">
                     <span class="forecast-vis-title">Simulated Trial Outcomes</span>
                     <span class="forecast-vis-count">1,000 trials</span>
@@ -9915,7 +9943,10 @@
           if (storedGoal) weeklyGoal = Number(storedGoal) || 5000;
 
           const storedDailyLimit = localStorage.getItem(STORAGE_KEYS.DAILY_LIMIT);
-          if (storedDailyLimit) dailySpendingLimit = Number(storedDailyLimit) || 1500;
+          if (storedDailyLimit !== null && storedDailyLimit !== '') {
+            const parsedDaily = Number(storedDailyLimit);
+            dailySpendingLimit = isNaN(parsedDaily) ? 1500 : parsedDaily;
+          }
 
           const storedBuffer = localStorage.getItem(STORAGE_KEYS.EMERGENCY_BUFFER);
           if (storedBuffer !== null) emergencyBuffer = Number(storedBuffer) || 0;
@@ -11134,6 +11165,15 @@
       }
       window.formatLKRWhole = formatLKRWhole;
 
+      function localDateStr(d = new Date()) {
+        const dt = (d instanceof Date && !isNaN(d.getTime())) ? d : new Date(d);
+        const year = dt.getFullYear();
+        const month = String(dt.getMonth() + 1).padStart(2, '0');
+        const day = String(dt.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+      }
+      window.localDateStr = localDateStr;
+
       function calculateDedunDailyPlan({
         balance = 0,
         todaySpent = 0,
@@ -11143,18 +11183,20 @@
         allowanceTarget = null,
         todayDate = null
       }) {
-        const L = Number(dailyLimit) || 0;
+        const rawL = Number(dailyLimit) || 0;
+        const L = rawL > 0 ? rawL : 0;
         const B = Number(emergencyBuffer) || 0;
         const bal = Number(balance) || 0;
         const spentToday = Number(todaySpent) || 0;
 
         const usable = Math.max(0, bal - B);
-        const leftToday = L - spentToday;
+        const leftToday = L > 0 ? (usable === 0 ? 0 : Math.min(L - spentToday, usable)) : 0;
 
         let isLate = false;
         let daysLate = 0;
         let afterToday = 0;
         let daysIncludingToday = 1;
+        let needsTarget = false;
 
         if (allowanceTarget) {
           if (typeof allowanceTarget.afterToday === 'number') {
@@ -11169,10 +11211,22 @@
             const today = todayDate ? new Date(todayDate) : new Date();
             const todayMid = new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime();
             let targetDate = null;
-            if (allowanceTarget.type === 'plan' && allowanceTarget.planStart) {
-              const pStart = new Date(allowanceTarget.planStart);
+            if (allowanceTarget.type === 'plan') {
+              let pStartStr = allowanceTarget.planStart || planStart;
+              if (!pStartStr) {
+                pStartStr = localDateStr(today);
+                planStart = pStartStr;
+                if (typeof savePlanSettings === 'function') savePlanSettings();
+              }
               const pDays = Number(allowanceTarget.planDays) || 7;
-              targetDate = new Date(pStart.getFullYear(), pStart.getMonth(), pStart.getDate() + pDays);
+              if (pStartStr instanceof Date) {
+                targetDate = new Date(pStartStr.getFullYear(), pStartStr.getMonth(), pStartStr.getDate() + pDays);
+              } else {
+                const p = String(pStartStr).split('-');
+                if (p.length === 3) {
+                  targetDate = new Date(parseInt(p[0], 10), parseInt(p[1], 10) - 1, parseInt(p[2], 10) + pDays);
+                }
+              }
             } else if (allowanceTarget instanceof Date) {
               targetDate = allowanceTarget;
             } else if (typeof allowanceTarget === 'string') {
@@ -11194,28 +11248,34 @@
                 afterToday = 0;
                 daysIncludingToday = 0;
               } else {
-                daysIncludingToday = Math.max(1, diffDays + 1);
-                afterToday = Math.max(0, diffDays);
+                daysIncludingToday = Math.max(1, diffDays);
+                afterToday = daysIncludingToday - 1;
               }
+            } else {
+              needsTarget = true;
             }
           }
+        } else {
+          needsTarget = true;
         }
 
         const lasts = L > 0 ? Math.floor((usable / L) * 10) / 10 : null;
-        const spare = (usable - afterToday * L >= 0) ? (usable - afterToday * L) : null;
-        const perDayNeeded = (afterToday > 0 && usable > 0 && usable < afterToday * L)
+        const spare = (!needsTarget && L > 0 && (usable - afterToday * L >= 0)) ? (usable - afterToday * L) : null;
+        const perDayNeeded = (!needsTarget && L > 0 && afterToday > 0 && usable > 0 && usable < afterToday * L)
           ? Math.floor((usable / afterToday) / 10) * 10
           : null;
 
         let hint = '';
         if (isLate) {
           hint = 'Your allowance date has passed. Tap the button when it lands, or set a new date.';
+        } else if (L <= 0) {
+          hint = 'Set a daily limit';
         } else if (usable === 0) {
           hint = 'You are at your emergency buffer.';
+        } else if (needsTarget) {
+          hint = 'Set your next allowance date or plan length in Settings.';
         } else if (afterToday === 0) {
           hint = 'Last spending day before your allowance.';
-        } else if (L === 0) {
-          hint = 'Set a daily limit';
         } else if (usable < afterToday * L && perDayNeeded !== null) {
           const floorLasts = Math.floor(lasts || 0);
           hint = `Spend about Rs. ${formatWhole(perDayNeeded)} a day to make it, or Rs. ${formatWhole(L)} a day for ${floorLasts} days.`;
@@ -11226,6 +11286,8 @@
 
         let status = 'on_track';
         if (isLate) status = 'late';
+        else if (L <= 0) status = 'no_limit';
+        else if (usable === 0) status = 'out_of_money';
         else if (leftToday < 0) status = 'over';
 
         return {
@@ -11239,6 +11301,7 @@
           daysLate,
           afterToday,
           daysIncludingToday,
+          needsTarget,
           L
         };
       }
@@ -11292,38 +11355,78 @@
 
       function runDedunLogicTests() {
         const results = [];
-        const t1 = calculateDedunDailyPlan({ dailyLimit: 1000, emergencyBuffer: 0, balance: 5100, todaySpent: 1100, allowanceTarget: { afterToday: 6 } });
+
+        const in1 = { dailyLimit: 1000, emergencyBuffer: 0, balance: 5100, todaySpent: 1100, allowanceTarget: { afterToday: 6 } };
+        const t1 = calculateDedunDailyPlan(in1);
         const p1 = t1.leftToday === -100 && t1.lasts === 5.1 && t1.perDayNeeded === 850 && t1.hint === 'Spend about Rs. 850 a day to make it, or Rs. 1,000 a day for 5 days.';
-        results.push({ test: 'T1', pass: p1 });
+        results.push({ test: 'T1', pass: p1, input: in1, output: t1 });
 
-        const t2 = calculateDedunDailyPlan({ dailyLimit: 1000, emergencyBuffer: 0, balance: 6950, todaySpent: 400, allowanceTarget: { afterToday: 6 } });
+        const in2 = { dailyLimit: 1000, emergencyBuffer: 0, balance: 6950, todaySpent: 400, allowanceTarget: { afterToday: 6 } };
+        const t2 = calculateDedunDailyPlan(in2);
         const p2 = t2.leftToday === 600 && t2.lasts === 6.9 && t2.spare === 950;
-        results.push({ test: 'T2', pass: p2 });
+        results.push({ test: 'T2', pass: p2, input: in2, output: t2 });
 
-        const t3 = calculateDedunDailyPlan({ dailyLimit: 1000, emergencyBuffer: 0, balance: 5100, todaySpent: 300, allowanceTarget: { daysLate: 4 } });
+        const in3 = { dailyLimit: 1000, emergencyBuffer: 0, balance: 5100, todaySpent: 300, allowanceTarget: { daysLate: 4 } };
+        const t3 = calculateDedunDailyPlan(in3);
         const p3 = t3.status === 'late' && t3.daysLate === 4 && t3.leftToday === 700 && t3.lasts === 5.1;
-        results.push({ test: 'T3', pass: p3 });
+        results.push({ test: 'T3', pass: p3, input: in3, output: t3 });
 
-        const t4 = calculateDedunDailyPlan({ dailyLimit: 0, emergencyBuffer: 0, balance: 5100, todaySpent: 300, allowanceTarget: { afterToday: 6 } });
-        const p4 = t4.lasts === null && t4.perDayNeeded === null && t4.hint === 'Set a daily limit';
-        results.push({ test: 'T4', pass: p4 });
+        const in4 = { dailyLimit: 0, emergencyBuffer: 0, balance: 5100, todaySpent: 300, allowanceTarget: { afterToday: 6 } };
+        const t4 = calculateDedunDailyPlan(in4);
+        const p4 = t4.status === 'no_limit' && t4.lasts === null && t4.perDayNeeded === null && t4.hint === 'Set a daily limit';
+        results.push({ test: 'T4', pass: p4, input: in4, output: t4 });
 
-        const t5 = calculateDedunDailyPlan({ dailyLimit: 1000, emergencyBuffer: 1000, balance: 800, todaySpent: 0, allowanceTarget: { afterToday: 6 } });
-        const p5 = t5.usable === 0 && (t5.lasts === 0 || t5.lasts === 0.0) && t5.hint === 'You are at your emergency buffer.';
-        results.push({ test: 'T5', pass: p5 });
+        const in5 = { dailyLimit: 1000, emergencyBuffer: 1000, balance: 800, todaySpent: 0, allowanceTarget: { afterToday: 6 } };
+        const t5 = calculateDedunDailyPlan(in5);
+        const p5 = t5.usable === 0 && t5.status === 'out_of_money' && t5.leftToday === 0 && (t5.lasts === 0 || t5.lasts === 0.0) && t5.hint === 'You are at your emergency buffer.';
+        results.push({ test: 'T5', pass: p5, input: in5, output: t5 });
 
-        const t6 = calculateDedunDailyPlan({ dailyLimit: 1000, emergencyBuffer: 0, balance: 5000, todaySpent: 200, allowanceTarget: { afterToday: 0 } });
+        const in6 = { dailyLimit: 1000, emergencyBuffer: 0, balance: 5000, todaySpent: 200, allowanceTarget: { afterToday: 0 } };
+        const t6 = calculateDedunDailyPlan(in6);
         const p6 = t6.hint === 'Last spending day before your allowance.';
-        results.push({ test: 'T6', pass: p6 });
+        results.push({ test: 'T6', pass: p6, input: in6, output: t6 });
 
-        const t7 = calculateDedunDailyPlan({ dailyLimit: 1000, emergencyBuffer: 0, balance: -500, todaySpent: 200, allowanceTarget: { afterToday: 6 } });
-        const p7 = t7.usable === 0 && !isNaN(t7.usable) && !isNaN(t7.leftToday) && isFinite(t7.usable) && isFinite(t7.leftToday);
-        results.push({ test: 'T7', pass: p7 });
+        const in7 = { dailyLimit: 1000, emergencyBuffer: 0, balance: -500, todaySpent: 200, allowanceTarget: { afterToday: 6 } };
+        const t7 = calculateDedunDailyPlan(in7);
+        const p7 = t7.usable === 0 && t7.status === 'out_of_money' && t7.leftToday === 0 && !isNaN(t7.usable) && !isNaN(t7.leftToday) && isFinite(t7.usable) && isFinite(t7.leftToday);
+        results.push({ test: 'T7', pass: p7, input: in7, output: t7 });
+
+        const in8 = { dailyLimit: 1000, emergencyBuffer: 0, balance: 5000, todaySpent: 200, allowanceTarget: new Date(2026, 9, 9), todayDate: new Date(2026, 9, 8) };
+        const t8 = calculateDedunDailyPlan(in8);
+        const p8 = t8.afterToday === 0 && t8.daysIncludingToday === 1 && t8.hint === 'Last spending day before your allowance.';
+        results.push({ test: 'T8', pass: p8, input: in8, output: t8 });
+
+        const in9 = { dailyLimit: 1000, emergencyBuffer: 0, balance: 7000, todaySpent: 200, allowanceTarget: new Date(2026, 9, 15), todayDate: new Date(2026, 9, 8) };
+        const t9 = calculateDedunDailyPlan(in9);
+        const p9 = t9.afterToday === 6 && t9.daysIncludingToday === 7;
+        results.push({ test: 'T9', pass: p9, input: in9, output: t9 });
+
+        const in10 = { dailyLimit: 1000, emergencyBuffer: 0, balance: 5000, todaySpent: 200, allowanceTarget: new Date(2026, 9, 8), todayDate: new Date(2026, 9, 8) };
+        const t10 = calculateDedunDailyPlan(in10);
+        const p10 = t10.afterToday === 0 && t10.daysIncludingToday === 1;
+        results.push({ test: 'T10', pass: p10, input: in10, output: t10 });
+
+        const in11 = { dailyLimit: 1000, emergencyBuffer: 0, balance: 5000, todaySpent: 200, allowanceTarget: new Date(2026, 9, 7), todayDate: new Date(2026, 9, 8) };
+        const t11 = calculateDedunDailyPlan(in11);
+        const p11 = t11.status === 'late' && t11.daysLate === 1;
+        results.push({ test: 'T11', pass: p11, input: in11, output: t11 });
+
+        const in12a = { dailyLimit: 1000, emergencyBuffer: 0, balance: 7000, todaySpent: 200, allowanceTarget: { type: 'plan', planStart: '2026-10-08', planDays: 7 }, todayDate: new Date(2026, 9, 8) };
+        const t12a = calculateDedunDailyPlan(in12a);
+        const in12b = { dailyLimit: 1000, emergencyBuffer: 0, balance: 6000, todaySpent: 200, allowanceTarget: { type: 'plan', planStart: '2026-10-08', planDays: 7 }, todayDate: new Date(2026, 9, 9) };
+        const t12b = calculateDedunDailyPlan(in12b);
+        const p12 = t12a.afterToday === 6 && t12b.afterToday === 5;
+        results.push({ test: 'T12', pass: p12, input: { day0: in12a, day1: in12b }, output: { day0: t12a, day1: t12b } });
+
+        const in13 = { dailyLimit: 1000, emergencyBuffer: 0, balance: 5000, todaySpent: 200, allowanceTarget: null, todayDate: new Date(2026, 9, 8) };
+        const t13 = calculateDedunDailyPlan(in13);
+        const p13 = t13.needsTarget === true && t13.hint === 'Set your next allowance date or plan length in Settings.';
+        results.push({ test: 'T13', pass: p13, input: in13, output: t13 });
 
         let allPassed = true;
         results.forEach(r => {
           if (!r.pass) allPassed = false;
-          console.log(`${r.test}: ${r.pass ? 'PASS' : 'FAIL'}`);
+          console.log(`${r.test}: ${r.pass ? 'PASS' : 'FAIL'} | input=${JSON.stringify(r.input)} | output=${JSON.stringify(r.output)}`);
         });
         console.log(`Dedun Logic Tests: ${allPassed ? 'ALL PASS' : 'SOME FAILED'}`);
         return allPassed;
@@ -11342,9 +11445,17 @@
           }
         }
         if (planTargetMode === 'plan') {
-          const start = planStart ? new Date(planStart) : new Date();
-          const target = new Date(start.getFullYear(), start.getMonth(), start.getDate() + (planDays || 7));
-          return target;
+          if (!planStart) {
+            planStart = localDateStr(new Date());
+            savePlanSettings();
+          }
+          const parts = String(planStart).split('-');
+          if (parts.length === 3) {
+            const start = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+            if (!isNaN(start.getTime())) {
+              return new Date(start.getFullYear(), start.getMonth(), start.getDate() + (planDays || 7));
+            }
+          }
         }
         return null;
       }
@@ -11530,6 +11641,10 @@
         // ==========================================
         // Safe to Spend Today & Daily Plan Logic
         // ==========================================
+        if (planTargetMode === 'plan' && !planStart) {
+          planStart = localDateStr(now);
+          savePlanSettings();
+        }
         const targetAllowanceDate = getAllowanceTargetDate();
         let allowanceTargetParam = null;
         if (targetAllowanceDate) {
@@ -11538,7 +11653,7 @@
           allowanceTargetParam = { type: 'plan', planStart, planDays };
         }
 
-        const dLimitNum = (typeof dailySpendingLimit === 'number') ? dailySpendingLimit : 1500;
+        const dLimitNum = (typeof dailySpendingLimit === 'number' && !isNaN(dailySpendingLimit)) ? dailySpendingLimit : 1500;
         const plan = calculateDedunDailyPlan({
           balance: currentNet,
           todaySpent,
@@ -11559,8 +11674,13 @@
         // 2. Card: Left to spend today
         const todayLeftElem = document.getElementById('todayLeftAmountDisplay');
         if (todayLeftElem) {
-          todayLeftElem.textContent = formatLKRWhole(plan.leftToday);
-          todayLeftElem.className = 'today-left-number amount-mono' + (plan.leftToday < 0 ? ' is-negative' : '');
+          if (plan.status === 'no_limit') {
+            todayLeftElem.textContent = 'Set a daily limit';
+            todayLeftElem.className = 'today-left-number amount-mono';
+          } else {
+            todayLeftElem.textContent = formatLKRWhole(plan.leftToday);
+            todayLeftElem.className = 'today-left-number amount-mono' + (plan.leftToday < 0 ? ' is-negative' : '');
+          }
         }
 
         const todayStatusPill = document.getElementById('todayStatusPill');
@@ -11568,7 +11688,13 @@
           if (plan.status === 'late') {
             todayStatusPill.className = 'today-status-pill pill-late';
             todayStatusPill.textContent = `Allowance ${plan.daysLate} ${plan.daysLate === 1 ? 'day' : 'days'} late`;
-          } else if (plan.leftToday < 0) {
+          } else if (plan.status === 'no_limit') {
+            todayStatusPill.className = 'today-status-pill pill-neutral';
+            todayStatusPill.textContent = 'Set a daily limit';
+          } else if (plan.status === 'out_of_money') {
+            todayStatusPill.className = 'today-status-pill pill-over';
+            todayStatusPill.textContent = 'Out of money';
+          } else if (plan.status === 'over') {
             todayStatusPill.className = 'today-status-pill pill-over';
             todayStatusPill.textContent = `Over by Rs. ${formatWhole(Math.abs(plan.leftToday))}`;
           } else {
@@ -11580,29 +11706,45 @@
         const todayProgressFill = document.getElementById('todayProgressBarFill');
         const todayProgressAria = document.getElementById('todayProgressAria');
         if (todayProgressFill) {
-          let pct = 0;
-          if (plan.L > 0) {
-            pct = Math.min(100, Math.max(0, (todaySpent / plan.L) * 100));
-          } else if (todaySpent > 0) {
-            pct = 100;
-          }
-          todayProgressFill.style.width = (plan.leftToday < 0 ? 100 : pct) + '%';
-          if (todayProgressAria) {
-            todayProgressAria.setAttribute('aria-valuenow', Math.round(pct));
-          }
-
-          if (plan.leftToday < 0) {
-            todayProgressFill.className = 'today-progress-bar-fill fill-over';
-          } else if (plan.L > 0 && todaySpent >= plan.L * 0.8) {
-            todayProgressFill.className = 'today-progress-bar-fill fill-warning';
+          if (plan.status === 'no_limit') {
+            todayProgressFill.style.width = '0%';
+            if (todayProgressAria) {
+              todayProgressAria.setAttribute('aria-valuenow', 0);
+            }
+            todayProgressFill.className = 'today-progress-bar-fill fill-neutral';
           } else {
-            todayProgressFill.className = 'today-progress-bar-fill fill-on-track';
+            let pct = 0;
+            if (plan.L > 0) {
+              pct = Math.min(100, Math.max(0, (todaySpent / plan.L) * 100));
+            }
+            const barWidth = (plan.status === 'over' || plan.status === 'out_of_money') ? 100 : pct;
+            todayProgressFill.style.width = barWidth + '%';
+            if (todayProgressAria) {
+              todayProgressAria.setAttribute('aria-valuenow', Math.round(barWidth));
+            }
+
+            if (plan.status === 'over' || plan.status === 'out_of_money') {
+              todayProgressFill.className = 'today-progress-bar-fill fill-over';
+            } else if (plan.L > 0 && todaySpent >= plan.L * 0.8) {
+              todayProgressFill.className = 'today-progress-bar-fill fill-warning';
+            } else {
+              todayProgressFill.className = 'today-progress-bar-fill fill-on-track';
+            }
           }
         }
 
         const todayProgressCaption = document.getElementById('todayProgressCaption');
         if (todayProgressCaption) {
-          todayProgressCaption.textContent = `Spent Rs. ${formatWhole(todaySpent)} of your Rs. ${formatWhole(plan.L)} limit`;
+          if (plan.status === 'no_limit') {
+            todayProgressCaption.textContent = 'Set a daily limit';
+          } else {
+            todayProgressCaption.textContent = `Spent Rs. ${formatWhole(todaySpent)} of your Rs. ${formatWhole(plan.L)} limit`;
+          }
+        }
+
+        const noLimitSettingsWrap = document.getElementById('noLimitSettingsBtnWrap');
+        if (noLimitSettingsWrap) {
+          noLimitSettingsWrap.style.display = (plan.status === 'no_limit') ? 'block' : 'none';
         }
 
         // 3. Card: Money lasts
@@ -11610,6 +11752,7 @@
         const moneyLastsTargetSub = document.getElementById('moneyLastsTargetSub');
         const moneyLastsHint = document.getElementById('moneyLastsHint');
         const allowanceArrivedWrap = document.getElementById('allowanceArrivedBtnWrap');
+        const needsTargetWrap = document.getElementById('needsTargetBtnWrap');
 
         if (moneyLastsDays) {
           if (plan.L > 0 && plan.lasts !== null) {
@@ -11630,7 +11773,7 @@
             moneyLastsTargetSub.textContent = 'Set a daily limit';
           } else if (plan.status === 'late') {
             moneyLastsTargetSub.textContent = `${plan.daysLate} ${plan.daysLate === 1 ? 'day' : 'days'} overdue`;
-          } else if (!allowanceTargetParam) {
+          } else if (plan.needsTarget) {
             moneyLastsTargetSub.textContent = 'No allowance date set';
           } else if (plan.afterToday === 0) {
             moneyLastsTargetSub.textContent = 'Allowance due today';
@@ -11645,6 +11788,10 @@
 
         if (allowanceArrivedWrap) {
           allowanceArrivedWrap.style.display = (plan.status === 'late') ? 'block' : 'none';
+        }
+
+        if (needsTargetWrap) {
+          needsTargetWrap.style.display = (plan.needsTarget && plan.status !== 'late') ? 'block' : 'none';
         }
 
         // 4. Streak
@@ -13536,22 +13683,53 @@
           if (e.target === explainerModal) hideTodayExplainer();
         });
 
-        // Allowance arrived button: open allowance date schedule to update
-        document.getElementById('btnAllowanceArrived')?.addEventListener('click', () => {
+        function openBudgetsSettings(focusId) {
           if (typeof window.openSettingsTopic === 'function') {
             switchSection('settings');
             window.openSettingsTopic('budgets');
             setTimeout(() => {
-              const el = document.getElementById('inputNextAllowanceDate');
+              const el = document.getElementById(focusId || 'inputNextAllowanceDate');
               if (el) {
                 el.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 el.focus();
               }
             }, 150);
           } else {
-            const inputDate = document.getElementById('inputNextAllowanceDate');
-            if (inputDate) inputDate.focus();
+            const inputEl = document.getElementById(focusId || 'inputNextAllowanceDate');
+            if (inputEl) inputEl.focus();
           }
+        }
+
+        document.getElementById('btnNeedsTargetSettings')?.addEventListener('click', () => {
+          openBudgetsSettings('inputNextAllowanceDate');
+        });
+
+        document.getElementById('btnNoLimitSettings')?.addEventListener('click', () => {
+          openBudgetsSettings('inputDailyLimitTools');
+        });
+
+        // Allowance arrived button: set planStart to local today, savePlanSettings, open Add Money with note "Allowance"
+        document.getElementById('btnAllowanceArrived')?.addEventListener('click', () => {
+          const todayStr = localDateStr(new Date());
+          planStart = todayStr;
+          savePlanSettings();
+
+          const incomeNoteEl = document.getElementById('incomeNote');
+          if (incomeNoteEl) incomeNoteEl.value = 'Allowance';
+          const incomeDateEl = document.getElementById('incomeDate');
+          if (incomeDateEl) incomeDateEl.value = todayStr;
+
+          const incomeModalEl = document.getElementById('incomeModal');
+          if (incomeModalEl) {
+            incomeModalEl.classList.add('open');
+          } else if (typeof window.openEntryForm === 'function') {
+            window.openEntryForm('income');
+          }
+
+          if (planTargetMode === 'date') {
+            showToast('Set your next allowance date in Settings');
+          }
+          updateHeroOverview();
         });
 
         // Forecast collapsible row toggle
